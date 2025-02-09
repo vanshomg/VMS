@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPICS Group Project - Video Monitoring System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <div class="logo">VMS</div>
+        <div class="title"><h2>Video Monitoring System</h2></div>
+        <div class="icons">
+            <button id="infoBtn">ℹ️</button>
+            <button id="menuBtn">☰</button>
+        </div>
+    </header>
+
+    <div class="info-dropdown" id="infoDropdown">
+        <div class="info-content">
+            <h3>Contact Information</h3>
+            <p><strong>Email:</strong> epicsgroupproject@vitbhopal.ac.in</p>
+            <p><strong>Phone:</strong> +91 94009 57245</p>
+            <p><strong>Address:</strong> VIT Bhopal University, Sehore</p>
+        </div>
+    </div>
+
+    <div class="menu-dropdown" id="menuDropdown">
+        <div class="menu-content">
+            <h3>Group Members</h3>
+            <ul>
+                <li>Vansh Dewan – 22BCE11025</li>
+                <li>Suraj K.V – 22BMR10007</li>
+                <li>Ansu M George – 22BSA10229</li>
+                <li>Ashin Murugan – 22MEI10025</li>
+                <li>P.N.V Abhiram – 22MIM10051</li>
+                <li>Vinayak K Asish – 22MIM10060</li>
+                <li>Harisankar G – 22MIM10063</li>
+                <li>Cherin Yacoob Wattacheril – 22MIM10074</li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <div class="project-title">
+            <h1>EPICS Group Project</h1>
+            <h2>Real-time Video Analysis System</h2>
+        </div>
+
+        <div class="video-container">
+            <!-- Camera-1: Backend team can modify video source in two ways:
+                 1. For URL stream: Change video tag to:
+                    <video id="camera1" autoplay muted>
+                        <source src="YOUR_STREAM_URL" type="video/mp4">
+                    </video>
+                 2. For system camera/local video:
+                    Keep the current structure and modify the setupDummyCamera 
+                    function in script.js with your video source -->
+            <div class="video-box">
+                <h3>Camera-1</h3>
+                <div class="video-frame">
+                    <video id="camera1" autoplay muted></video>
+                </div>
+                <!-- To update predictions: Use JavaScript to modify the text content
+                     Example: document.getElementById('prediction1').textContent = 'New Prediction' -->
+                <div class="prediction-box">
+                    <p><strong>Prediction:</strong></p>
+                    <p id="prediction1">Ready for real-time predictions</p>
+                </div>
+            </div>
+
+            <!-- Camera-2: Same integration options as Camera-1 -->
+            <div class="video-box">
+                <h3>Camera-2</h3>
+                <div class="video-frame">
+                    <video id="camera2" autoplay muted></video>
+                </div>
+                <div class="prediction-box">
+                    <p><strong>Prediction:</strong></p>
+                    <p id="prediction2">Ready for real-time predictions</p>
+                </div>
+            </div>
+
+            <!-- Output: Can be modified to:
+                 1. Accept different video formats
+                 2. Process uploaded videos
+                 3. Display processed results -->
+            <div class="video-box">
+                <h3>Output</h3>
+                <div class="video-frame">
+                    <div id="upload-container">
+                        <input type="file" id="fileInput" accept="video/*" style="display: none;">
+                        <button id="uploadBtn">Upload Video</button>
+                        <video id="uploadedVideo" style="display: none;"></video>
+                    </div>
+                </div>
+                <div class="prediction-box">
+                    <p><strong>Prediction:</strong></p>
+                    <p id="prediction3">Ready for real-time predictions</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
